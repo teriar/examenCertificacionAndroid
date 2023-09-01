@@ -9,7 +9,7 @@ class Hero_Retrofit {
     companion object{
         private const val URL_BASE = "https://y-mariocanedo.vercel.app/"
 
-        fun getRetrofitPhone(): Hero_Api {
+        fun getRetrofitHero(): Hero_Api {
             val mRetrofit = Retrofit.Builder()
                 .baseUrl(URL_BASE)
 

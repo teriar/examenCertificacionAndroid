@@ -17,14 +17,14 @@ class ListViewModel(application: Application):AndroidViewModel(application) {
     fun detailLiveData(id:Int) = repository.getDetailHero(id)
 
     init {
-        val api = Hero_Retrofit.getRetrofitPhone()
+        val api = Hero_Retrofit.getRetrofitHero()
         val dao = HeroDatabase.getDataBase(application).getHeroDao()
         repository = Repository(api,dao)
     }
-    fun getDataPhones()= viewModelScope.launch {
+    fun getDataHeroes()= viewModelScope.launch {
         repository.getHeroes()
     }
-    fun getDetailPhone(id:Int)=viewModelScope.launch {
+    fun getDetailHero(id:Int)=viewModelScope.launch {
         repository.getDetailHeroToEntity(id)
     }
 
