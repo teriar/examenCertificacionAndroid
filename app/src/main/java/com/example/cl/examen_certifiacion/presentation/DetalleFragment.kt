@@ -59,7 +59,7 @@ class DetalleFragment : Fragment() {
                  binding.txtSuperHero.text = it.nombre
                  binding.txtfecha.text = "Año de creacion $ano"
                  binding.txtPoder.text = "Poder: $poder"
-                 binding.TxtColor.text = "color: $color"
+                  binding.TxtColor.text = "color: $color"
 
                     if(it.traducion == true){
                         binding.txtTraduccion.text="Cuenta con traduccion"

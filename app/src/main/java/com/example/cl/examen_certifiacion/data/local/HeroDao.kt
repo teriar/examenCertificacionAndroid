@@ -11,6 +11,12 @@ interface HeroDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertHero(HeroEntity: HeroEntity)
 
+
+    //para pruebas android
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertHero(HeroEntity:List<HeroEntity>)
+
+
     @Query("Select * from table_hero order by id asc")
     fun getHeroes(): LiveData<List<HeroEntity>>
 

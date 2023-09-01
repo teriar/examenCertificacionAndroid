@@ -24,7 +24,7 @@ abstract class HeroDatabase:RoomDatabase() {
                 val instance = Room.databaseBuilder(
                     context.applicationContext,
                     HeroDatabase::class.java,
-                    "Phone_database"
+                    "Hero_database"
                 ).build()
 
                 INSTANCE = instance
