@@ -9,7 +9,7 @@ import androidx.room.RoomDatabase
 @Database(entities = [HeroEntity::class, HeroDetailEntity::class], version = 1)
 abstract class HeroDatabase:RoomDatabase() {
 
-    abstract fun getPhoneDao(): HeroDao
+    abstract fun getHeroDao(): HeroDao
 
     companion object{
         @Volatile

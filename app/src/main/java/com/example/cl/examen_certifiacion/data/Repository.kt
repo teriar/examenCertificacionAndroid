@@ -16,7 +16,7 @@ class Repository(private val HeroApi: Hero_Api, private val HeroDao: HeroDao ) {
     fun getHeroEntity(): LiveData<List<HeroEntity>> = HeroDao.getHeroes()
     fun getDetailHero(id:Int): LiveData<HeroDetailEntity> = HeroDao.getDetailHero(id)
 
-    suspend fun  getPHeroes(){
+    suspend fun  getHeroes(){
         val response: Response<List<Hero>> = HeroApi.getDataList()// aca llegan los datos
         if(response.isSuccessful){ //??llegaron los datos
             val resp = response.body()?.forEach{
