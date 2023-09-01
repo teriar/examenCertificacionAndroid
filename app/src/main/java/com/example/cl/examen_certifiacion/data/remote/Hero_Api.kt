@@ -10,5 +10,5 @@ interface Hero_Api {
     suspend fun getDataList(): Response<List<Hero>>
 
     @GET("superheroes/{id}")
-    suspend fun getDetailHero(@Path("id") id:Int): Response<List<Detail_Hero>>
+    suspend fun getDetailHero(@Path("id") id:Int): Response<Detail_Hero>
 }
